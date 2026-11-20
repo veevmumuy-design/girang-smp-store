@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIRANG SMP STORE</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#090909;
+color:white;
+font-family:Arial,sans-serif;
+}
+header{
+background:#151515;
+padding:18px;
+text-align:center;
+border-bottom:2px solid #e33;
+}
+header h2{margin:0;color:#f33}
+nav{text-align:center;padding:15px}
+nav a{
+color:white;
+text-decoration:none;
+margin:8px;
+font-size:13px;
+}
+.hero{
+text-align:center;
+padding:65px 15px;
+background:linear-gradient(#461010,#090909);
+}
+.hero h1{font-size:45px;margin:10px}
+.hero span{color:#f33}
+.hero p{color:#ccc}
+.container{
+padding:15px;
+max-width:1000px;
+margin:auto;
+}
+.title{text-align:center;margin:35px 0 20px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+gap:15px;
+}
+.card{
+background:#191919;
+border:1px solid #333;
+border-radius:12px;
+padding:20px;
+text-align:center;
+}
+.card h3{color:#ff5555}
+.price{font-size:23px;font-weight:bold}
+.card p{color:#aaa;font-size:13px}
+button{
+background:#e33;
+color:white;
+border:0;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+width:100%;
+}
+.info{
+background:#191919;
+padding:18px;
+border-radius:10px;
+margin:12px 0;
+}
+.info p{color:#ccc}
+.form{
+background:#191919;
+padding:20px;
+border-radius:12px;
+}
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:7px 0 15px;
+background:#090909;
+color:white;
+border:1px solid #444;
+border-radius:7px;
+}
+label{font-size:14px}
+footer{
+text-align:center;
+padding:25px;
+color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>GIRANG SMP</h2>
+<small>OFFICIAL STORE</small>
+</header>
+
+<nav>
+<a href="#rank">RANK</a>
+<a href="#keys">KEYS</a>
+<a href="#info">INFO</a>
+<a href="#order">ORDER</a>
+</nav>
+
+<div class="hero">
+<h1>GIRANG <span>SMP</span></h1>
+<p>LIFESTEAL • ECONOMY • ANARCHY</p>
+<button onclick="document.getElementById('rank').scrollIntoView()">LIHAT STORE</button>
+</div>
+
+<div class="container">
+
+<h2 class="title" id="rank">RANK STORE</h2>
+<div class="grid">
+
+<div class="card">
+<h3>MASTER</h3>
+<div class="price">Rp20.000</div>
+<p>MASTER RANK</p>
+<button onclick="pilih('Rank','MASTER','Rp20.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>ZENITH</h3>
+<div class="price">Rp40.000</div>
+<p>ZENITH RANK</p>
+<button onclick="pilih('Rank','ZENITH','Rp40.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>MYTHICAL</h3>
+<div class="price">Rp80.000</div>
+<p>MYTHICAL RANK</p>
+<button onclick="pilih('Rank','MYTHICAL','Rp80.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>GRANDMASTER</h3>
+<div class="price">Rp100.000</div>
+<p>GRANDMASTER RANK</p>
+<button onclick="pilih('Rank','GRANDMASTER','Rp100.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>GIRANG</h3>
+<div class="price">Rp127.000</div>
+<p>EXCLUSIVE RANK</p>
+<button onclick="pilih('Rank','GIRANG','Rp127.000')">BELI</button>
+</div>
+
+</div>
+
+<h2 class="title" id="keys">KEY STORE</h2>
+<div class="grid">
+
+<div class="card">
+<h3>COMMON KEY</h3>
+<div class="price">Rp10.000</div>
+<p>1 PEMBELIAN = 2 KEY</p>
+<button onclick="pilih('Key','2x COMMON KEY','Rp10.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>ARCANE KEY</h3>
+<div class="price">Rp30.000</div>
+<p>1 PEMBELIAN = 2 KEY</p>
+<button onclick="pilih('Key','2x ARCANE KEY','Rp30.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>CLOWN KEY</h3>
+<div class="price">Rp70.000</div>
+<p>1 PEMBELIAN = 2 KEY</p>
+<button onclick="pilih('Key','2x CLOWN KEY','Rp70.000')">BELI</button>
+</div>
+
+<div class="card">
+<h3>SPECIAL KEY</h3>
+<div class="price">Rp100.000</div>
+<p>1 PEMBELIAN = 2 KEY</p>
+<button onclick="pilih('Key','2x SPECIAL KEY','Rp100.000')">BELI</button>
+</div>
+
+</div>
+
+<h2 class="title" id="info">INFORMASI SERVER</h2>
+
+<div class="info">
+<h3>⚔️ MODE SERVER</h3>
+<p>Lifesteal • Economy • Anarchy</p>
+</div>
+
+<div class="info">
+<h3>JAVA EDITION</h3>
+<p>IP: girangsmp.raznar.net</p>
+</div>
+
+<div class="info">
+<h3>BEDROCK EDITION</h3>
+<p>IP: gamegame-gnl-jh2.raznar.net</p>
+<p>PORT: 25024</p>
+</div>
+
+<div class="info">
+<h3>CARA PEMBELIAN</h3>
+<p>Pilih produk, masukkan username Minecraft, kemudian hubungi admin melalui WhatsApp.</p>
+</div>
+
+<h2 class="title" id="order">BUAT PESANAN</h2>
+
+<div class="form">
+
+<label>Kategori</label>
+<select id="kategori">
+<option>Rank</option>
+<option>Key</option>
+</select>
+
+<label>Produk</label>
+<input id="produk" placeholder="Nama produk">
+
+<label>Harga</label>
+<input id="harga" placeholder="Harga produk">
+
+<label>Username Minecraft</label>
+<input id="username" placeholder="Masukkan username MC">
+
+<label>Edisi Minecraft</label>
+<select id="edisi">
+<option>Java</option>
+<option>Bedrock</option>
+</select>
+
+<label>Catatan</label>
+<textarea id="catatan" placeholder="Catatan tambahan"></textarea>
+
+<button onclick="pesan()">BELI SEKARANG VIA WHATSAPP</button>
+
+</div>
+</div>
+
+<footer>
+GIRANG SMP STORE<br>
+LIFESTEAL • ECONOMY • ANARCHY
+</footer>
+
+<script>
+const admin="6285184992107";
+
+function pilih(kategori,produk,harga){
+document.getElementById("kategori").value=kategori;
+document.getElementById("produk").value=produk;
+document.getElementById("harga").value=harga;
+
+document.getElementById("order").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+function pesan(){
+
+let kategori=document.getElementById("kategori").value;
+let produk=document.getElementById("produk").value.trim();
+let harga=document.getElementById("harga").value.trim();
+let username=document.getElementById("username").value.trim();
+let edisi=document.getElementById("edisi").value;
+let catatan=document.getElementById("catatan").value.trim();
+
+if(!produk||!username){
+alert("Isi produk dan username Minecraft!");
+return;
+}
+
+let pesan=
+"Halo admin GIRANG SMP!"+
+"\n\nSaya ingin membeli produk dari GIRANG SMP STORE."+
+"\nKategori: "+kategori+
+"\nProduk: "+produk+
+"\nHarga: "+harga+
+"\nUsername Minecraft: "+username+
+"\nEdisi: "+edisi+
+"\nCatatan: "+(catatan||"-")+
+"\n\nMohon info pembayaran dan proses selanjutnya. Terima kasih!";
+
+window.open(
+"https://wa.me/"+admin+"?text="+encodeURIComponent(pesan),
+"_blank"
+);
+}
+</script>
+
+</body>
+</html>
